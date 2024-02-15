@@ -1,11 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alphabet Clash</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    
+    <main class="bg-[#010313] min-h-screen bg-[url(../images/background.png)] bg-no-repeat bg-bottom">
+        <section id="paygroudInterface" class="flex items-center justify-center h-screen ">
+            <div class="text-center">
+                <h1 class="text-[130px] text-[#FFF] font-anton mb-0">ALPHABET CLASH</h1>
+                <p class="text-[#FFF] mt-[-20px] text-2xl">Unleash Your Keyboard Kung Fu: Press “Play Now” to Play</p>
+                <button onclick="play()" class="btn mt-14 text-2xl">Play Now</button>
+            </div>
+        </section>
+        <!-- paygroud start area -->
+        <section id="playStartArea" class="play-ground-start hidden">
+            <div class="max-w-[1024px] mx-auto space-y-24 pt-32">
+                <div class="flex justify-center">
+                    <div class=" artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] rounded-xl bg-[#FFFFFFB2]">
+                        <div class="mx-auto bg-[#2F2941] w-[396px] text-center pb-2 py-2 px-3 rounded-b-lg flex justify-center">
+                            <p class="text-white">Don't watch keyboard while playing...</p>
+                        </div>
+                        <p id="displayAlphabet" class="text-[118px] text-center uppercase">Y</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                      </div> 
+                      <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                      </div>
+                      <div class="flex justify-between mt-14">
+                        <div>
+                            <button class="btn btn-secondary text-xl">Life<span><img src="./images/Group 23.svg" alt=""></span class><span id="current-life">5</span></button>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary text-xl">Score <span><img src="./images/monetization_on.svg" alt=""></span><span id="current-score">0</span></button>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <!-- playgroud end area -->
+        <section id="ResultScore" class="play-groud-end flex justify-center items-center min-h-screen hidden">
+            <div class="text-center space-y-4 bg-[#FFFFFF33] py-4 px-10 rounded-xl">
+                <p class="text-white text-2xl">Game Over !</p>
+                <h1>
+                    <span class="text-7xl font-bold text-white">Score:</span>
+                    <span id="mainScore" class="text-7xl font-semibold text-white">0</span>
+                </h1>
+                <button onclick="scoreResultArea()" id="scoreResultArea" class="btn px-6 text-xl">Play Again</button>
+                <p class="text-white text-xl">Practice will make you Pro</p>
+            </div>
+        </section>
+    </main>
+        
+    </main>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/script.js"></script>
+
 </body>
 </html>
